@@ -1,8 +1,8 @@
 {
-    "left_image_dir": "../test/testdata/image1.png",
-    "right_image_dir": "../test/testdata/image2.png",
+    "left_image_dir": "test/testdata/image1.png",
+    "right_image_dir": "test/testdata/image2.png",
     "num_disparities": 96,
     "block_size": 11,
-    "calibration_file_dir": "../calib/calibration_data.txt",
-    "result_dir": "../results/sample_3d_pointcloud.ply" 
+    "calibration_file_dir": "calib/calibration_data.txt",
+    "result_dir": "results/sample_3d_pointcloud.ply" 
 }
