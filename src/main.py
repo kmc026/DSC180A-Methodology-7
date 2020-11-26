@@ -23,7 +23,7 @@ def write_ply(fn, verts, colors):
 
 
 def generate_3d_pointcloud(left_image_dir, right_image_dir, num_disparities, block_size, calibration_file_dir, result_dir):
-     """
+    """
     Generates the 3D Point Cloud as .ply object in the results directory
 
     Parameters
@@ -54,6 +54,9 @@ def generate_3d_pointcloud(left_image_dir, right_image_dir, num_disparities, blo
     #Read the two images in color
     image1_colored = cv2.imread(left_image_dir, 1)
     image2_colored = cv2.imread(right_image_dir, 1)
+
+    cv2.imread('image', image1)
+    cv2.imread('image', image2)
 
     #Generate the disparity map
     stereo = cv2.StereoBM_create(numDisparities = num_disparities, blockSize = block_size)

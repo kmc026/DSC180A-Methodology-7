@@ -1,7 +1,0 @@
-{
-    "config": ["config/camera_calibration_config.json", "config.json"],
-    "build": "run.py",
-    "library": ["src"],
-    "notebook": ["notebooks/notebook.ipynb"],
-    "targets": ["calibresult.png", "notebook.ipynb"]
-}
