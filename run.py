@@ -1,5 +1,21 @@
-from src.camera_calibration import calibrate_camera
+import sys
 import json
 
-calibrate_camera_config = json.load(open("config/camera_calibration_config.json"))
-calibrate_camera(calibrate_camera_config['fps'], calibrate_camera_config['image'], calibrate_camera_config['result'])
+from src.main import generate_3d_pointcloud
+
+
+def main(targets):
+
+    test_config = json.load(open("config/config.json"))
+
+    if 'test' in targets:
+        
+        generate_3d_pointcloud(test_config['left_image_dir'], test_config['right_image_dir'],
+         test_config['num_disparities'], test_config['block_size'], test_config['calibration_file_dir'], 
+         test_config['result_dir'])
+
+    
+if __name__ == '__main__':
+
+    targets = sys.argv[1:]
+    main(targets)

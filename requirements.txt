@@ -1,4 +1,2 @@
 numpy
-pyzed.sl
 cv2
-glob
